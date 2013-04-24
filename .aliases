@@ -20,6 +20,14 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# Ruby
+alias be="bundle exec"
+alias gemi="gem i --no-ri --no-rdoc"
+
+# Amazon EC2
+alias ec2st="be cap ec2:status"
+alias ec2ssh="be cap ec2:ssh"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
