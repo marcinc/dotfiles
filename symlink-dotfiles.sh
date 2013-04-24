@@ -36,4 +36,6 @@ fi
 #   link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
 # fi
 
-source ~/.bash_profile
+if [ -e "$HOME/.bash_profile" ]; then
+  source ~/.bash_profile
+fi
