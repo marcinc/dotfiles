@@ -33,9 +33,9 @@ brew install php54
 #brew install homebrew/dupes/screen
 
 # Install everything else
+# brew install git - already installed
 brew install ack
-#brew install exiv2
-brew install git
+# brew install exiv2
 brew install imagemagick
 brew install lynx
 brew install node
