@@ -22,6 +22,7 @@ alias oo="open ."
 
 # Ruby
 alias be="bundle exec"
+alias bi="bundle install"
 alias gemi="gem i --no-ri --no-rdoc"
 
 # Amazon EC2
