@@ -27,7 +27,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   for filename in $files; do 
     if [ "$filename" != .. ] && [ "$filename" != . ]
     then
-      link "$dotfiles/$filename" "$HOME/$filename"
+      link "$dotfiles/home/$filename" "$HOME/$filename"
     fi
   done
 fi
