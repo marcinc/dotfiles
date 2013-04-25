@@ -27,7 +27,7 @@ set -- -f; source install.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; rm -rf dotfiles; mkdir -p dotfiles; cd dotfiles; curl -#L https://github.com/marcinc/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,install.sh}; source install.sh
+cd; rm -rf dotfiles; mkdir -p dotfiles; cd dotfiles; curl -#L https://github.com/marcinc/dotfiles/tarball/master | tar -xzv --strip-components 1; source install.sh
 ```
 
 To update later on, just run that command again.
