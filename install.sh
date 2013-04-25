@@ -17,8 +17,7 @@ link() {
   from="$1"
   to="$2"
   echo "Linking '$from' to '$to'"
-  rm --force "$to"
-  ln -s "$from" "$to"
+  ln -nfs "$from" "$to"
 }
 
 read -p "This will symlink your current dotfiles in HOME. Are you sure? (y/n) " -n 1
