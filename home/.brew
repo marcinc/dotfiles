@@ -55,6 +55,20 @@ brew install mysql
 
 # Ruby related stuff
 brew install rbenv
+brew install ruby-build
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# Post brew installation
+
+# autostarting services
+# mySQL
+ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+# Memcache
+ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents
+# MongoDB
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+# Redis
+ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+
