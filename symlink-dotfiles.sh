@@ -24,11 +24,12 @@ link() {
 read -p "This will symlink your current dotfiles in HOME. Are you sure? (y/n) " -n 1
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  for location in home/*; do
-    file="${location##*/}"
-    file="${file%.*}"
-    echo "that will symlink $dotfiles/$location to $HOME/.$file"
-    # link "$dotfiles/$location" "$HOME/.$file"
+  files=`ls -a home`
+  for filename in $files; do 
+    if [ "$filename" != .. ] && [ "$filename" != . ]
+    then
+      link "$dotfiles/$filename" "$HOME/$filename"
+    fi
   done
 fi
 
