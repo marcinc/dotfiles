@@ -50,6 +50,7 @@ brew install leiningen
 brew tap homebrew/versions
 brew install lua52
 brew install tor
+brew install tig
 
 # Install mySQL
 brew install mysql
