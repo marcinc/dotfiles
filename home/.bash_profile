@@ -40,3 +40,12 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+# Adding sbin to path
+export PATH="/usr/local/sbin:$PATH"

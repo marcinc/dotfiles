@@ -60,6 +60,9 @@
 	remote = origin
 	merge = refs/heads/master
 
+[branch]
+autosetuprebase = always
+
 # URL shorthands
 [url "git@github.com:"]
 	insteadOf = "gh:"
@@ -75,4 +78,4 @@
 	insteadOf = "gist:"
 
 [push]
-	default = simple
+	default = current
