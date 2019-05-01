@@ -4,7 +4,7 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra,git-autocomplete}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -46,6 +46,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
+
+export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
+[[ -r /usr/local/etc/profile.d/bash_completion.sh ]] && . /usr/local/etc/profile.d/bash_completion.sh
 
 # Adding sbin to path
 export PATH="/usr/local/sbin:$PATH"
