@@ -36,6 +36,10 @@ fi
 #   link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
 # fi
 
+if [ -e "$HOME/.brew" ]; then
+  source ~/.brew
+fi
+
 if [ -e "$HOME/.bash_profile" ]; then
   source ~/.bash_profile
 fi
